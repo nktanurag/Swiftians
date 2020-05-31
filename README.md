@@ -1,2 +1,2 @@
 # Learn-Web
-For Swiftians
+Learn web by noob
