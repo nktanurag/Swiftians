@@ -2,7 +2,7 @@
 <html lang="en-US" style="height: 100%;">
 <head>
 	<title>SWIFTIANS</title>
-	<script type="text/javascript" src="http://mediaplayer.yahoo.com/js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
 	<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -72,6 +72,19 @@ footer {
   text-align: center;
   color: white;
 }
+h5.heading5
+{
+	color:orange;
+}
+p.important
+{
+	color:light pink;
+}
+p.hesitate
+{
+	color:light brown;
+}
+
 
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
 @media (max-width: 500px) {
@@ -281,19 +294,19 @@ footer {
     		
     		<p>1989 is the fifth studio album by American singer-songwriter Taylor Swift, released on October 27, 2014, through Big Machine Records.</p>
     		<pre>
-                Released ->	October 27, 2014
-                Recorded ->	2013–2014
-                Studio   ->     Various	
-                Genre	 ->     Synth-pop
-                Label	 ->     Big Machine
-                Producer ->	Max Martin 
-                                Taylor Swift 
-                                Jack Antonoff 
-                                Nathan Chapman 
-                                Imogen HeapMattman & Robin 
-                                Ali Payami  Shellback 
-                                Ryan Tedder 
-                                Noel Zancanella
+          Released ->	October 27, 2014
+          Recorded ->	2013–2014
+          Studio   ->   Various	
+          Genre	   ->   Synth-pop
+          Label	   ->   Big Machine
+          Producer ->	Max Martin 
+                        Taylor Swift 
+                        Jack Antonoff 
+                        Nathan Chapman 
+                        Imogen HeapMattman & Robin 
+                        Ali Payami  Shellback 
+                        Ryan Tedder 
+                        Noel Zancanella
 
 
 
@@ -580,23 +593,23 @@ footer {
     	<article>
     		<p>Lover is the seventh studio album by American singer-songwriter Taylor Swift. </p>
     		<pre>
-                Released ->     August 23, 2019
-                Recorded ->	November 2018-February 2019
-                Studio   ->     Electric Lady 
-                                Golden Age 
-                                Electric Feel 
-                                Metropolis
-                Genre	 ->     Pop 
-                                synth-pop 
-                                electropop 
-                                retro-pop 
-                                pop rock
-                Length	 ->     61:48
-                Producer ->	Jack Antoff
-                                Louis Bell
-                                Frank Dukes
-                                Joe Little 
-                                Taylor Swift
+          Released ->   August 23, 2019
+          Recorded ->	November 2018-February 2019
+          Studio   ->   Electric Lady 
+                        Golden Age 
+                        Electric Feel 
+                        Metropolis
+          Genre	   ->   Pop 
+                        synth-pop 
+                        electropop 
+                        retro-pop 
+                        pop rock
+          Length   ->   61:48
+          Producer ->	Jack Antoff
+                        Louis Bell
+                        Frank Dukes
+                        Joe Little 
+                        Taylor Swift
 
 
 
@@ -652,51 +665,96 @@ footer {
 
 
 <br>
-<section>
-    	<nav>
-    		<ul>
+<footer>
+	<footer class="   " id="  ">
 
-            	<summary>
-            	Please fill up your suggestions.It matters alot!	
-            	</summary>
-            	<br>
-            	<br>
-<form action="/abc.php">
-	<label for="fname">YOUR NAME:</label>
+	<h5 style="font-size: 50px;">About</h5>
+	
+
+		
+    <form action="/abc.php">
+    	<form style="margin: auto;width:60%" action="/abc.php" target="_blank">
+    		<p class="important">I hope that you enjoyed surfing <br>this website.I have made this just to learn<br> little bit of developing a website and more importantly <br>to have fun in this lockdown.Many features in this <br>website are not currently active because of the<br> lack of much knowledge in this field.So do help me if you <br>wish to!</p>
+    		<br>
+
+    		<p class="hesitate">DO NOT HESITATE TO CONTACT ME</p>
+    		<br>
+	      <label for="fname">YOUR NAME?</label>
 	
 	<br>
     <input type="text" id="YOUR NAME" name="fname"><br><br>
     
-    <label for="fname">Favourite TS Song</label><br>
+    <label for="fname">Favourite TS Song?</label><br>
     <input type="text" id="Favourite TS Song" name="fname"><br><br>
 
     <label for="true">Are you a true Swiftians?</label><br>
     <select id="true" name="true">
     	<option value="YES1">Yes Ofcourse</option>
-    	<option value="NO1">Caa't Say</option>
+    	<option value="NO1">Can't Say</option>
     	<option value="YES2">NO</option>
     </select>
     <br><br>
     
-    <label for="fname">Any Suggestions</label><br>
+    <label for="fname">Any Suggestions:</label><br>
     <input type="text" id="Favourite TS Song" name="fname"><br><br>
     
     <input type="SUBMIT" value="SUBMIT">
 </form> 
 
 <br><br><br>
+</h5></header>
+<br>
+<br>
+<br>
+<br>
+
+
+
+   <p>Know your Location:</p>
+   <button onclick="getLocation()">LOCATE ME</button>
+   <p id="demo"></p>
+   <script>
+   	var x=document.getElementById("demo");
+
+   	function getLocation()
+   	{
+   		if(navigator.geolocation)
+   		{
+   			navigator.geolocation.watchPosition(showPosition);
+   		}
+   		else
+   		{
+   			x.innerHTML="Geolocation is not supported on this browser";
+   		}
+   	}
+   	function showPosition(position)
+   	{
+   		x.innerHTML="Latitude: "+position.coords.latitude 
+   		+ "<br>Longitude: " + position.coords.longitude + "<br>Accuracy: " + position.coords.accuracy + "<br>Altitude: " + position.coords.altitude;
+   	}
+
+   </script>
+   <br><br><br><br>
+
 
 
 	 
-<p>The HTML address element defines contact information (author/owner) of a document or article.</p>
+
 
 <address>              <!comments daal raha mai>
-Written by <br>ANKIT ANURAG.<br> 
-Visit us at:<br>
-<a href="" target="_blank"></a>
-	<br>
-New Boys Hostel<br>
-IIT PATNA <br>
+Developed by: ANKIT ANURAG<br> <br>
+Social Media Profiles:<br>
+<a href="https://instagram.com/nktanurag/" target="_blank" style="color:black">INSTAGRAM   </a><br>
+<a href="https://facebook.com/ankit.anurag.98622/" target="_blank" style="color:black">FACEBOOK   </a><br>
+<a href="https://twitter.com/nktanurag?s=09/" target="_blank" style="color:black">TWITTER </a><br><br>
+Email Me:
+
+<a href="mailto:nktanurag@gmail.com?subject = Feedback&body = Message" style="color:pink">
+	Send Feedback
+</a><br><br>
+Address:<br>
+New Boys Hostel,IIT PATNA <br>
+Bihta,Patna<br>
 INDIA
 </address>
 
