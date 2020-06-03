@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US" style="height: 100%;">
+<html lang="en>
 <head>
   <title>SWIFTIANS</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
@@ -7,15 +7,186 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" href="/site/index.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+ 
+
+<style>
+
+* {
+  box-sizing: border-box;
+  }
+
+body {
+  font-family: Arial, Helvetica, sans-serif,'Times New Roman', Times, serif;
+}
+
+/* Style the header */
+header {
+  background-color: #558;
+  padding: 0%;
+  text-align: center;
+  font-size: 40px;
+  color: white;
+}
+aside{
+    width:50%;
+    background-image: url("");
+    padding-left: .5rem;
+    margin-left: .5rem;
+    float: right;
+    box-shadow: inset 5px 0 5px -5px #29627e;
+    font-style: italic;
+    color: #29627e;
+}
+
+
+/* Create two columns/boxes that floats next to each other */
+nav .album_playlist{
+  float: left;
+  width: 50%;
+  
+  background: ;
+  padding: 20px;
+  border: 5.5px solid DodgerBlue;
+  color: black;
+}
+
+
+/*<h1  style="text-align:center;font-size:550%; color:orange; font-family:courier;border:2px solid DodgerBlue">TAYLOR SWIFT SONGS</h1>*/
+
+/* Style the list inside the menu */
+nav ul.album_playlist {
+  list-style-type: none;
+  padding: 10px;
+  font color: #f1f1f1 ;
+} 
+
+article {
+  float: left;
+  padding: 10px;
+  width: 50%;
+  background-color: ;
+  color: black;
+  border:5.5px solid DodgerBlue;
+ 
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: black ;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  border-color:green;
+  border-style: dotted;
+}
+a:link                             /*about link*/
+{
+  color:pink;
+}
+a:visited
+{
+  color:brown;
+}
+
+a:hover
+{
+    color:yellow;
+}
+a:active
+{
+  color:blue;
+}
+h2
+{
+  color:grey;
+}
+h5
+{
+  color:orange;
+}
+
+#map
+{
+  height:400px;
+  width:100%;
+}
+.marginauto {
+    margin: 10px auto 20px;
+    display: block;
+}
+
+
+input:focus
+{
+  background-color: yellow;
+}
+p.important
+{
+  color:light pink;
+}
+p.hesitate
+{
+  color:light brown;
+}
+body
+{
+  /* background-image: url("https://lh3.googleusercontent.com/fokUeEtcl4IQXL8ufgE9lVdnTchHD6tx4YQHMGnuV_AdxyESx6mF8X7qoH-I4WfGGU2vyT9BsO11YFiO31VzXCgfv2CZcfuaIUzBOZRCbajh9XSWdrndOCWLogZwKKfDtSBHZNeT=w2400"); */
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
+}
+.myText{
+  width:200px;
+  height: 40px;
+}
+footer a {
+  color: #70726F;
+  font-size: 20px;
+  padding: 10px;
+  
+  transition: all .5s ease;
+}
+
+footer a:hover {
+  color: white;
+}
+
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 500px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+  @viewport{
+    width:device-width;
+    zoom:1.0;
+  }
+  @-ms-viewport{
+    width:device-width;
+  }
+}
+</style>
+
 </head>
-  
-  
-<body>
+  <body>
 
     <!-- NAVBAR -->
 
     <div class="navbar_">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a  class="navbar-brand " href="index.html"><img src="images/swiftian-logo.jpg" alt="logo" style="width: 85px; height: auto"></a>
             <a class="navbar-brand" href="#">Swiftians</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -647,6 +818,7 @@
 
         
     </section>
+ 
     
 
 
@@ -665,93 +837,141 @@
 
 
 <br>
-<footer>
-  <footer class="   " id="  ">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
 
-  
-  
+<!-- Footer -->
+<footer class="footer font-small mdb-color lighten-3 pt-4">
 
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left">
+
+    <a href="index.html">
+      <img class="marginauto" src="images/swiftian-logo-black.jpg" alt="logo" style="width: 150px; height: auto; text-align:center"></a>
     
-    <form action="/abc.php" method:"get">
-      <form style="margin: auto width:40%" action="/abc.php" target="_blank">
+             <h1 style=" text-align: center;font-size: 30px">Swiftians</h7><br><br>
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-4 mr-auto my-md-4 my-0 mt-4 mb-1">
+
+        <!-- Content -->
+        <h5 class="font-weight-bold text-uppercase mb-4">About</h5>
+        <p>Developed By:</p>
+        <p>Ankit Anurag</p><p> Aradhya Gupta</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-4 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+        <!-- Links -->
+        
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-4 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+        <!-- Contact details -->
+        <h5 class="font-weight-bold text-uppercase mb-4">Address</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <p>
+             New Boy's Hostel
+            </p>
+              <p>IIT PATNA</p>
+              <p>Bihta,Patna,India</p>
+          </li>
+        </ul>
+
+         
+
+      </div><br>
+      <br>
+      <!-- Grid column -->
+       <div class="container text-center">
+      
+
+      <div class="col-md-6 col-lg-6 text-center mx-auto my-5">
+
+        <!-- Social buttons -->
+        <h5 class="font-weight-bold text-uppercase mb-4">Follow Us</h5>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-google-plus"></i></a>
+        <a href="#"><i class="fa fa-skype"></i></a>
+       
+
+      </div>
+      <!-- Grid column -->
+
+
+     
         
 
-        <p class="hesitate">VISITOR BOX !</p>
-        <br>
-        <label for="fname">YOUR NAME?</label>
+
+    </div>
+    <!-- Grid row -->
+    <div class="container text-center">
+    <ul class="list-unstyled">
+          <li>
+            <p>
+
+
+           
+            <h5 class="font-weight-bold text-uppercase mb-4">Visitor Box</h5>
+            <form action="/abc.php" method:"get">
+            <form style="margin: auto; width:5%" action="/abc.php" target="_blank">
+        
+
+           
+            <label for="fname">YOUR NAME?</label>
   
-  <br>
-    <input type="text" id="YOUR NAME" name="fname"><br><br>
+            <br>
+            <input class="myText" type="text" id="YOUR NAME" name="fname" size="35"><br><br>
     
-    <label for="fname">Favourite TS Song?</label><br>
-    <input type="text" id="Favourite TS Song" name="fname"><br><br>
+            <label for="fname">Favourite TS Song?</label><br>
+            <input class="myText" type="text" id="Favourite TS Song" name="fname"><br><br>
 
-    <label for="true">Are you a true Swiftians?</label><br>
-    <select id="true" name="true">
-      <option value="YES1">Yes Ofcourse</option>
-      <option value="NO1">Can't Say</option>
-      <option value="YES2">NO</option>
-    </select>
-    <br><br>
+            
     
-    <label for="fname">Any Suggestions:</label><br>
-    <input type="text" id="Favourite TS Song" name="fname" style="height: 100px ;width:250px"><br><br><br><br>
+           <label for="fname">Any Suggestions:</label><br>
+           <input class="myText" type="text" id="Favourite TS Song" name="fname" style="height: 100px ;width:225px"><br><br><br><br>
     
-    <input type="SUBMIT" value="SUBMIT">
-</form> 
-</form>
-
-
-<br><br><br><br>
-
-
-<!--instant location lat and long-->
-   <p>Know your Location:</p>
-   <button onclick="getLocation()">LOCATE ME</button>
-   <p id="demo"></p>
-   <script>
-    var x=document.getElementById("demo");
-
-    function getLocation()
-    {
-      if(navigator.geolocation)
-      {
-        navigator.geolocation.watchPosition(showPosition);
-      }
-      else
-      {
-        x.innerHTML="Geolocation is not supported on this browser";
-      }
-    }
-    function showPosition(position)
-    {
-      x.innerHTML="Latitude: "+position.coords.latitude 
-      + "<br>Longitude: " + position.coords.longitude + "<br>Accuracy: " + position.coords.accuracy + "<br>Altitude: " + position.coords.altitude;
-    }
-
-   </script>
-   <br>
-   <!--intsant location live ended-->
-   
+           <input type="SUBMIT" value="SUBMIT">
+           </form> 
+           </form>
 
 
 
-  <h>Reach Us!</h><br>
 
-   <!--google map adding-->
-    <div id="map"></div>
-    <script>
-      function initMap()
-      {
-        var iitp={lat:25.535823, lng:84.850886};
-        var map=new google.maps.Map(document.getElementById('map'),{zoom:4,center:iitp});
-        var marker=new google.maps.Marker({position:iitp,map:map});
 
-      }
-    </script>
-    <script async defer src ="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
-    <br>
-   <!--ending map details-->
+
+
+
+
+
+
+
+              </p>
+          </li>
+        </ul>
+
+  </div>
+  <!-- Footer Links -->
+
+
+
+
 
    <br>
    <br>
@@ -759,25 +979,37 @@
   <!--adding google calendar-->
 
    <br><br><br>
-   <iframe src="https://calendar.google.com/calendar/embed?src=anuragankit2020%40gmail.com&ctz=Asia%2FKolkata" style="border: 5" width="300" height="250" frameborder="20" scrolling="no"></iframe>
+   <iframe style="margin:10px auto 20px;" src="https://calendar.google.com/calendar/embed?src=anuragankit2020%40gmail.com&ctz=Asia%2FKolkata" style="border: 5" width="300" height="250" frameborder="20" scrolling="no"></iframe>
    <br>
    <br>
+ </div>
 
    <!--google calendar added-->
 
 
-<address>              <!comments daal raha mai>
-Developed by: <br>ANKIT ANURAG & ARADHYA GUPTA<br> <br>
+  <!-- Copyright -->
+  <div style="text-align: center">
+  <h1 style="text-align: center">© 2020 Copyright</h1>
+    <a href="https://nktanurag.github.io/Learn-Web/site/?#">             TaylorSwiftFan.com</a>
+  </div>
+  
+  <!-- Copyright -->
 
-Address:<br>
-New Boys Hostel,IIT PATNA <br>
-Bihta,Patna<br>
-INDIA
-</address>
+</footer>
+<!-- Footer -->
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
 
+
+
+ 
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</div>
+</footer>
+</ul>
+</nav>
+</section>
 </body>
 </html>
