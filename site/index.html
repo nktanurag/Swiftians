@@ -1,16 +1,26 @@
 <!DOCTYPE html>
-<html lang="en>
+
 <head>
+
+
   <title>SWIFTIANS</title>
+  
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="index.js"></script>
+  <link rel="shortcut icon" type="image/png" href="images/favicon.png">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
   <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" href="/site/style.css">
+  <link rel="stylesheet" href="/site/style.css">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  
+  
 
 
 </head> 
@@ -162,6 +172,18 @@ footer a {
 
 footer a:hover {
   color: white;
+}
+ /*for toggling up and down about "taylor swift"*/
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
 }
 
 
@@ -330,15 +352,18 @@ footer a:hover {
      <hr>
 
 
-     <h2 style="font-size:50px;text-align: center; "><i>ABOUT Taylor Swift</i></h2>
-     <p style="color:black ; text-align: center;">Taylor Alison Swift (born December 13, 1989) is an American singer-songwriter. She is known for her narrative songwriting, which often centers around her personal life and has received widespread media coverage and critical praise. At age 14, Swift became the youngest artist signed by the Sony/ATV Music publishing house and, at age 15, she signed her first record deal. Her 2006 eponymous debut album was the longest-charting album of the 2000s in the US. </p>
+     <div id="flip">ABOUT Taylor Swift<br><h>(Click to know)</h></div>
 
+     <div id="panel">Taylor Alison Swift (born December 13, 1989) is an American singer-songwriter. She is known for her narrative songwriting, which often centers around her personal life and has received widespread media coverage and critical praise.<br> At age 14, Swift became the youngest artist signed by the Sony/ATV Music publishing house and, at age 15, she signed her first record deal. Her 2006 eponymous debut album was the longest-charting album of the 2000s in the US. </div>
+
+     
       <br>
       <div style="text-align: center">
      <a href="https://en.m.wikipedia.org/wiki/Taylor_Swift" target="_blank">More about Taylor</a>
       <br>
     </div>
-  
+    
+    
        <br>
 
 
@@ -833,18 +858,7 @@ footer a:hover {
         
     </section>
  
-    
-
-
-
-
-
-
-
-
-
-<br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br>
+   
 
 
 
