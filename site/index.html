@@ -27,6 +27,22 @@
 
 <style>
 
+ 
+
+.heading{
+    animation: yourAnimation 3s infinite 1s ease-out;
+}
+@keyframes yourAnimation{
+    0%{
+        opacity: 0;
+        }
+    83%{
+        opacity: 1;
+        font-size: 60px;
+        font-weight: 700;
+        }
+}
+
 * {
   box-sizing: border-box;
   }
@@ -288,10 +304,11 @@ footer a:hover {
     </div>
     <!-- NAVBAR CLOSED -->
     <br><br><br><br>
-    <h2  style="text-align:center;font-size:550%; font-family:'Times New Roman'; border:4px solid rgb(163, 106, 101); ">
+   <div class="heading" >
+    <h2  style="text-align:center; font-size: larger; font-family:'Times New Roman'; border:4px solid rgb(163, 106, 101); ">
         TAYLOR SWIFT SONGS
     </h2>
-
+    </div>
     <!-- Carousal -->
     <div class="container">
         <div class="row">
