@@ -4,7 +4,8 @@
 
 
   <title>SWIFTIANS</title>
-  
+
+  <script src="//code.jquery.com/jquery-3.3.1.js"></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="index.js"></script>
@@ -13,9 +14,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="/site/style.css">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+ 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -35,341 +35,45 @@
 
 <style>
 
- 
 
-.heading{
-    animation: yourAnimation 3s infinite 1s ease-out;
-}
-@keyframes yourAnimation{
-    0%{
-        opacity: 0;
-        }
-    83%{
-        opacity: 1;
-        font-size: 60px;
-        font-weight: 700;
-        }
-}
-
-* {
-  box-sizing: border-box;
-  }
-
-body {
-  font-family: Arial, Helvetica, sans-serif,'Times New Roman', Times, serif;
-}
-
-/* Style the header */
-header {
-  background-color: #558;
-  padding: 0%;
-  text-align: center;
-  font-size: 40px;
-  color: white;
-}
-aside{
-    width:50%;
-    background-image: url("");
-    padding-left: .5rem;
-    margin-left: .5rem;
-    float: right;
-    box-shadow: inset 5px 0 5px -5px #29627e;
-    font-style: italic;
-    color: #29627e;
-}
-
-
-/* Create two columns/boxes that floats next to each other */
-nav .album_playlist{
-  float: left;
-  width: 50%;
-  
-  background: ;
-  padding: 20px;
-  border: 5.5px solid DodgerBlue;
-  color: black;
-}
-
-
-/*<h1  style="text-align:center;font-size:550%; color:orange; font-family:courier;border:2px solid DodgerBlue">TAYLOR SWIFT SONGS</h1>*/
-
-/* Style the list inside the menu */
-nav ul.album_playlist {
-  list-style-type: none;
-  padding: 10px;
-  font color: #f1f1f1 ;
-} 
-
-article {
-  float: left;
-  padding: 10px;
-  width: 50%;
-  background-color: ;
-  color: black;
-  border:5.5px solid DodgerBlue;
- 
-}
-
-/* Clear floats after the columns */
-section:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Style the footer */
-footer {
-  background-color: black ;
-  padding: 10px;
-  text-align: center;
-  color: white;
-  border-color:green;
-  border-style: dotted;
-}
-a:link                             /*about link*/
-{
-  color:pink;
-}
-a:visited
-{
-  color:brown;
-}
-
-a:hover
-{
-    color:yellow;
-}
-a:active
-{
-  color:blue;
-}
-h2
-{
-  color:grey;
-}
 h5
 {
   color:orange;
 }
 
-#map
-{
-  height:400px;
-  width:100%;
-}
-.marginauto {
-    margin: 10px auto 20px;
-    display: block;
-}
 
-
-input:focus
-{
-  background-color: yellow;
-}
-p.important
-{
-  color:light pink;
-}
-p.hesitate
-{
-  color:light brown;
-}
-body
-{
-  /* background-image: url("https://lh3.googleusercontent.com/fokUeEtcl4IQXL8ufgE9lVdnTchHD6tx4YQHMGnuV_AdxyESx6mF8X7qoH-I4WfGGU2vyT9BsO11YFiO31VzXCgfv2CZcfuaIUzBOZRCbajh9XSWdrndOCWLogZwKKfDtSBHZNeT=w2400"); */
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-attachment: fixed;
-}
-.myText{
-  width:200px;
-  height: 40px;
-}
-footer a {
-  color: #70726F;
-  font-size: 20px;
-  padding: 10px;
-  
-  transition: all .5s ease;
-}
-
-footer a:hover {
-  color: white;
-}
- /*for toggling up and down about "taylor swift"*/
-#panel, #flip {
-  padding: 5px;
-  text-align: center;
-  background-color: #e5eecc;
-  border: solid 1px #c3c3c3;
-}
-
-#panel {
-  padding: 50px;
-  display: none;
-}
-
-
-/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-@media (max-width: 500px) {
-  nav, article {
-    width: 100%;
-    height: auto;
-  }
-  @viewport{
-    width:device-width;
-    zoom:1.0;
-  }
-  @-ms-viewport{
-    width:device-width;
-  }
-}
 </style>
 
 
   <body>
+  
+  <div id="navbar">
 
+</div>
 
-    <!-- NAVBAR -->
+   <script>
+$(function(){
+  $("#navbar").load("nav.html");
+});
+</script>
+<!--end of Navigation bar-->
 
-    <div class="navbar_">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-          <a  class="navbar-brand " href="index.html"><img src="images/swiftian-logo.jpg" alt="logo" style="width: 85px; height: auto"></a>
-            <a class="navbar-brand" href="#">Swiftians</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    About
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#" style="font-size: 100%;color:grey"><p>
-                    Developed By:<br>
-                    Ankit Anurag & Aradhya Gupta<br>
-                    Purpose:<br>
-                    Learn Web-dev & more<br>
-                    importantly to have fun </p>
-
-                  </a>
-
-                    
-                  </div>
-                </li>
-                
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Albums
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">1989</a>
-                    <a class="dropdown-item" href="#">Reputation</a>
-                    <a class="dropdown-item" href="#">Red</a>
-                    <a class="dropdown-item" href="#">Fearless</a>
-                    <a class="dropdown-item" href="#">Speak Now</a>
-                    <a class="dropdown-item" href="#">Lover</a>
-                    
-                  </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contact Us</a>
-                       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-    
-
-                       <div class="container text-align">
-      
-
-      <div class="row-md-2 row-lg-2 ">
-
-        <!-- Social buttons -->
-        <a href="tel:919602647335"><i class="fa fa-mobile " style="font-size: 23px"></i></a>
-        <a href="#"><i class="fa fa-facebook" style="font-size: 20px"></i></a>
-        <a href="instagram.com/nktanurag?igshid=9s1r8ixifrfw"><i class="fa fa-instagram" style="font-size: 20px"></i></a>
-        <a href="https://twitter.com/nktanurag?s=09/"><i class="fa fa-twitter" style="font-size: 20px"></i></a>
-        <a href="#"><i class="fa fa-linkedin" style="font-size: 20px"></i></a>
-        <a href="#"><i class="fa fa-mail" style="font-size: 20px"></i></a>
-        
-        <a href="https://api.whatsapp.com/send?phone=919602647335"><i class="fa fa-whatsapp" style="font-size: 20px"></i></a>
-
-      </div>
-
-                       </div>
-                  </li>
-              </ul>
-              <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search a song" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >Search </button>
-              </form>
-            </div>
-          </nav>
-    </div>
-    <!-- NAVBAR CLOSED -->
     <br><br><br><br>
    <div class="heading" >
     <h2  style="text-align:center; font-size: larger; font-family:'Times New Roman'; border:4px solid rgb(163, 106, 101); ">
         TAYLOR SWIFT SONGS
     </h2>
     </div>
-    <!-- Carousal -->
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-2"></div>
-            <div class="col-sm-8">
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                      <li data-target="#carouselExampleIndicators" data-slide-to="3" class="active"></li>
-                      <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-                      <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-                    </ol>
-                    <div class="carousel-inner" style="height: 335px">
-                      <div class="carousel-item active">
-                        <img class="d-block w-100" src="images/1.jpg" alt="First slide" >
-                      </div>
-                      <div class="carousel-item">
-                        <img class="d-block w-100" src="images/2.jpg" alt="Second slide">
-                      </div>
+    <div id="carousel">
 
-                      <div class="carousel-item">
-                        <img class="d-block w-100" src="images/3.jpg" alt="Third slide">
-                      </div>
-                        <div class="carousel-item">
+</div>
 
-                        <img class="d-block w-100" src="images/4.jpg" alt="Fourth slide" >
-                      </div>
-                      <div class="carousel-item">
-                        <img class="d-block w-100" src="images/5.jpg" alt="Fifth slide">
-                      </div>
-                      <div class="carousel-item">
-                        <img class="d-block w-100" src="images/6.jpg" alt="Sixth slide">
-                      </div>
-
-                    </div>
-                  
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Next</span>
-                    </a>
-                  </div>
+   <script>
+$(function(){
+  $("#carousel").load("carousel.html");
+});
+</script>
             
-            </div>
-        </div>
-    </div>
-  
     
      <br>
      <br>
@@ -397,715 +101,62 @@ footer a:hover {
   <br>
   
      
-    <header> 
-      <h3 style="text-align:center;font-size:150%; color:orange; font-family:courier;border:2px solid DodgerBlue">1989
-        </h3>
-    </header>
-
-    
-    <section>
-      <nav class="album_playlist">
-
-        <ul class="album_playlist">
-
-
-        <ul>
-
-            
-            <details>
-              <summary>
-                COMPLETE PLAYLIST
-              </summary>
-              <br>
-              <iframe width="300" height="225" src="https://www.youtube.com/embed/videoseries?list=PLy9fdnTqHOhelEzKeDgpRXiJuBiLYK3wN" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </details>
-            <br>
-            <br>
-          
-
-            </details>
-
-        <details><summary>Blank SPACE</summary>
-          <br>
-            
-            <a href="https://tunesbox.xyz/mp3download/taylor-swift-look-what-you-made-me-do.html" target="_blank">MP3</a>
-            <br><br>
-
-            <iframe width="300" height="185" src="https://www.youtube.com/embed/e-ORhEE9VVg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-        </details>
-        <br>
-               
-            <details><summary>Style</summary>
-              <br>
-            
-            <a href="https://tunesbox.xyz/mp3download/taylor-swift-look-what-you-made-me-do.html" target="_blank">MP3</a>
-            <br><br>
-
-            <iframe width="300" height="185" src="https://www.youtube.com/embed/-CmadmM5cOk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-            </details>
-            <br>
-
-            <details><summary>Wildest Dreams</summary>
-              <br>
-            
-            <a href="https://tunesbox.xyz/mp3download/taylor-swift-look-what-you-made-me-do.html" target="_blank">MP3</a>
-
-            <br><br>
-
-            <iframe width="300" height="185" src="https://www.youtube.com/embed/IdneKLhsWOQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </details>
-            <br>
-
-            <details><summary>Shake It Off</summary>
-            <br>
-            <a href="https://tunesbox.xyz/mp3download/taylor-swift-look-what-you-made-me-do.html" target="_blank">MP3</a>
-             <br><br>
-            <iframe width="300" height="185" src="https://www.youtube.com/embed/nfWlot6h_JM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-        </details>
-        <br>
-
-
-            <details><summary>How You Get the Girl</summary>
-              <br>
-            
-            <a href="https://tunesbox.xyz/mp3download/taylor-swift-look-what-you-made-me-do.html" target="_blank">MP3</a>
-            <br><br>
-
-            <iframe width="300" height="185" src="https://www.youtube.com/embed/8_iOSKP9kUc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-        </details>
-    
-          <br>
-
-
-            <details><summary>Bad Blood</summary>
-              <br>
-            
-            <a href="https://tunesbox.xyz/mp3download/taylor-swift-look-what-you-made-me-do.html" target="_blank">MP3</a>
-            <br><br>
-            <iframe width="300" height="185" src="https://www.youtube.com/embed/QcIy9NiNbmo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-        </details>
-        
-
-        <br>
-
-        <details><summary>Welcome to the New York</summary>
-          <br>
-            
-            <a href="https://tunesbox.xyz/mp3download/taylor-swift-look-what-you-made-me-do.html" target="_blank">MP3</a>
-            <br><br>
-
-            <iframe width="300" height="185" src="https://www.youtube.com/embed/RfjPHmgBPF0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-        </details>
-        
-
-        <br>
-
-        <details><summary>All You Had to do Was Stay</summary><br>
-            
-            <a href="https://tunesbox.xyz/mp3download/taylor-swift-look-what-you-made-me-do.html" target="_blank">MP3</a>
-            <br><br>
-
-            <iframe width="300" height="185" src="https://www.youtube.com/embed/Wo93B0s7QcY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-        </details>
-        
-
-        <br>
-
-        <details><summary>Out of the Woods</summary>
-
-          <br>
-            
-            <a href="https://tunesbox.xyz/mp3download/taylor-swift-look-what-you-made-me-do.html" target="_blank">MP3</a>
-            <br>
-            <br>
-            <iframe width="300" height="185" src="https://www.youtube.com/embed/JLf9q36UsBk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-        </details>
-        
-
-        <br>
-
-        <details><summary>This Love</summary>
-          <br>
-            
-            <a href="https://tunesbox.xyz/mp3download/taylor-swift-look-what-you-made-me-do.html" target="_blank">MP3</a>
-            <br><br>
-
-            <iframe width="300" height="185" src="https://www.youtube.com/embed/MWIMNAeGva4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </details>
-        
-
-
-         <br><br><br><br><br><br><br><br>
-       
-
-
-
-
-
-
-
-
-
-
-            
-
-
-        
-        </ul>
-      </nav>
-
-      <article>
-        
-        <p>1989 is the fifth studio album by American singer-songwriter Taylor Swift, released on October 27, 2014, through Big Machine Records.</p>
-        <pre>
-      Released ->   October 27, 2014
-      Recorded ->   2013–2014
-      Studio   ->   Various 
-      Genre    ->   Synth-pop
-      Label    ->   Big Machine
-      Producer ->   Max Martin 
-                    Taylor Swift 
-                    Jack Antonoff 
-                    Nathan Chapman 
-                    Imogen HeapMattman & Robin 
-                    Ali Payami  Shellback 
-                    Ryan Tedder 
-                    Noel Zancanella
-                      </pre>
-            
- <img src="https://lh3.googleusercontent.com/ldaYBerMO4kAUBg-u70FXx9pWFLS2VThsvxyjP7LLilG0njZgPR3HFbK2vPp30k2Mx-KXFnCqaWEHU1cwsUfQQ7--UrOeY8a01h9GKJpLK3OpMKhB1St4TMJPi1cepMn6WLy9VNt=w2400" width="325"  height="285" > </a>  
-                    
-         </article>                  
-
-
-        
-    </section>
-   
-     <br>
-     <br>
-     <br>
-     <br>
-    
-     <br>
-     <br>
-     <br>
-     <br>
-
-     <br>
-     <br>
-     <br>
-     <br>
-
-
-
-
-
-
-
-
-
-      <header>
-              <h3 style="text-align:center;font-size:150%; color:orange; font-family:courier;border:2px solid DodgerBlue">LOVER
-        </h3>
-    </header>
-
-    
-    <section>
-      <nav class="album_playlist">
-
-        <ul class="album_playlist">
-          <details>
-              <summary>
-                COMPLETE PLAYLIST
-              </summary>
-              <br>
-              <iframe width="300" height="225" src="https://www.youtube.com/embed/playlist?list=PLkqz3S84Tw-RdM_IQwtQrYJpkOmJH2Ngw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </details>
-            <br>
-            <br>
-        <details><summary>Lover</summary>
-          <br>
-            
-            <a href="https://tunesbox.xyz/mp3download/taylor-swift-look-what-you-made-me-do.html" target="_blank">MP3</a>
-            <br><br>
-
-            <iframe width="300" height="185" src="https://www.youtube.com/embed/-BjZmE2gtdo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-        </details>
-        <br>
-               
-            <details><summary>I Forget that You Existed</summary>
-              <br>
-            
-            <a href="https://tunesbox.xyz/mp3download/taylor-swift-look-what-you-made-me-do.html" target="_blank">MP3</a>
-            <br><br>
-
-            <iframe width="300" height="185" src="https://www.youtube.com/embed/p1cEvNn88jM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-            </details>
-            <br>
-
-            <details><summary>Paper Rings</summary>
-              <br>
-            
-            <a href="https://tunesbox.xyz/mp3download/taylor-swift-look-what-you-made-me-do.html" target="_blank">MP3</a>
-
-            <br><br>
-
-            <iframe width="300" height="185" src="https://www.youtube.com/embed/8zdg-pDF10g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </details>
-            <br>
-
-            <details><summary>The Man</summary>
-            <br>
-            <a href="https://tunesbox.xyz/mp3download/taylor-swift-look-what-you-made-me-do.html" target="_blank">MP3</a>
-             <br><br>
-            <iframe width="300" height="185" src="https://www.youtube.com/embed/pHoHDNxay3A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-        </details>
-        <br>
-
-
-            <details><summary>Cruel Summer</summary>
-              <br>
-            
-            <a href="https://tunesbox.xyz/mp3download/taylor-swift-look-what-you-made-me-do.html" target="_blank">MP3</a>
-            <br><br>
-
-            <iframe width="300" height="185" src="https://www.youtube.com/embed/ic8j13piAhQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-        </details>
-    
-          <br>
-
-
-            <details><summary>Miss Americana & The Heartbreak Prince</summary>
-              <br>
-            
-            <a href="https://tunesbox.xyz/mp3download/taylor-swift-look-what-you-made-me-do.html" target="_blank">MP3</a>
-            <br><br>
-            <iframe width="300" height="185" src="https://www.youtube.com/embed/Kwf7P2GNAVw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-        </details>
-        
-
-        <br>
-
-        <details><summary>London Boy</summary>
-          <br>
-            
-            <a href="https://tunesbox.xyz/mp3download/taylor-swift-look-what-you-made-me-do.html" target="_blank">MP3</a>
-            <br><br>
-
-            <iframe width="300" height="185" src="https://www.youtube.com/embed/VsKoOH6DVys" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-        </details>
-        
-
-        <br>
-
-        <details><summary>I Think He Knows</summary><br>
-            
-            <a href="https://tunesbox.xyz/mp3download/taylor-swift-look-what-you-made-me-do.html" target="_blank">MP3</a>
-            <br><br>
-
-            <iframe width="300" height="185" src="https://www.youtube.com/embed/2d1wKn-oJnA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-        </details>
-        
-
-        <br>
-
-        <details><summary>Cornelia Street</summary>
-
-          <br>
-            
-            <a href="https://tunesbox.xyz/mp3download/taylor-swift-look-what-you-made-me-do.html" target="_blank">MP3</a>
-            <br>
-            <br>
-            <iframe width="300" height="185" src="https://www.youtube.com/embed/VikHHWrgb4Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-        </details>
-        
-
-        <br>
-
-        <details><summary>Daylight</summary>
-          <br>
-            
-            <a href="https://tunesbox.xyz/mp3download/taylor-swift-look-what-you-made-me-do.html" target="_blank">MP3</a>
-            <br><br>
-
-            <iframe width="300" height="185" src="https://www.youtube.com/embed/u9raS7-NisU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-        </details>
-        
-
-        <br>
-            
-            <details><summary>Death By a Thousand Cuts</summary>
-          <br>
-            
-            <a href="https://tunesbox.xyz/mp3download/taylor-swift-look-what-you-made-me-do.html" target="_blank">MP3</a>
-            <br><br>
-
-            <iframe width="300" height="185" src="https://www.youtube.com/embed/GTEFSuFfgnU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-        </details>
-        <br>
-
-
-        <details><summary>Afterglow</summary>
-          <br>
-            
-            <a href="https://tunesbox.xyz/mp3download/taylor-swift-look-what-you-made-me-do.html" target="_blank">MP3</a>
-            <br><br>
-
-            <iframe width="300" height="185" src="https://www.youtube.com/embed/8HxbqAsppwU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-        </details>
-        <br>
-        
-            <details><summary>The Arher</summary>
-          <br>
-            
-            <a href="https://tunesbox.xyz/mp3download/taylor-swift-look-what-you-made-me-do.html" target="_blank">MP3</a>
-            <br><br>
-
-            <iframe width="300" height="185" src="https://www.youtube.com/embed/8KpKc3C9V3w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-        </details>
-        <br>
-
-        <details><summary>You need to Calm Down</summary>
-          <br>
-            
-            <a href="https://tunesbox.xyz/mp3download/taylor-swift-look-what-you-made-me-do.html" target="_blank">MP3</a>
-            <br><br>
-
-            <iframe width="300" height="185" src="https://www.youtube.com/embed/Dkk9gvTmCXY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-        </details>
-        <br>
-        
-
-        <details><summary>False God</summary>
-          <br>
-            
-            <a href="https://tunesbox.xyz/mp3download/taylor-swift-look-what-you-made-me-do.html" target="_blank">MP3</a>
-            <br><br>
-
-            <iframe width="300" height="185" src="https://www.youtube.com/embed/acQXa5ArHIk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-        </details>
-        <br>
-
-        <details><summary>MEI</summary>
-          <br>
-            
-            <a href="https://tunesbox.xyz/mp3download/taylor-swift-look-what-you-made-me-do.html" target="_blank">MP3</a>
-            <br><br>
-
-            <iframe width="300" height="185" src="https://www.youtube.com/embed/FuXNumBwDOM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-        </details>
-        <br>
-
-        <details><summary>Soon You'll Get Better</summary>
-          <br>
-            
-            <a href="https://tunesbox.xyz/mp3download/taylor-swift-look-what-you-made-me-do.html" target="_blank">MP3</a>
-            <br><br>
-
-            <iframe width="300" height="185" src="https://www.youtube.com/embed/tMoW5G5LU08" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-        </details>
-        <br>
-
-        <details><summary>It's Nice To have Friend</summary>
-          <br>
-            
-            <a href="https://tunesbox.xyz/mp3download/taylor-swift-look-what-you-made-me-do.html" target="_blank">MP3</a>
-            <br><br>
-
-            <iframe width="300" height="185" src="https://www.youtube.com/embed/eaP1VswBF28" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-        </details>
-        <br>
-
-        
-        
-        
-        
-        
-        
-        </ul>
-      </nav>
-
-      <article>
-        <p>Lover is the seventh studio album by American singer-songwriter Taylor Swift. </p>
-        <pre>
-          Released ->   August 23, 2019
-          Recorded ->   November 2018-
-                        February 2019
-          Studio   ->   Electric Lady 
-                        Golden Age 
-                        Electric Feel 
-                        Metropolis
-          Genre    ->   Pop 
-                        synth-pop 
-                        electropop 
-                        retro-pop 
-                        pop rock
-          Length   ->   61:48
-          Producer ->   Jack Antoff
-                        Louis Bell
-                        Frank Dukes
-                        Joe Little 
-                        Taylor Swift
-
-
-
-<img src="https://lh3.googleusercontent.com/zPWy-mqKVm-4m120ZNVBBtnOUf1FoF5JgocgIP0o9wpLRjtOTpl_BHUzEWpD4Cfmbu1WT-4Kv9CRGZb4a75qWhSCE4zwipBwvPLPZNW9qdAjcKvgP4S0_s9KfR-Iha8JlPEeuXya=w2400"  width="325" height="355"> </a>  
-
-
-
-          </pre> 
-         </article>                  
-
-
-        
-    </section>
-    <br><br><br>
-
-</ul></nav></section>
-
-
-
-
- <header> 
-      <h3 style="text-align:center;font-size:150%; color:orange; font-family:courier;border:2px solid DodgerBlue">Social-Media Walls
-        </h3>
-    </header>
-
-    
-   <article>
-    <h3>FACEBOOK</h3>
-        <div><div id="fb-root"></div>
-                         <script>(function (d, s, id) {
-                          var js, fjs = d.getElementsByTagName(s)[0];
-                          if (d.getElementById(id)) return;
-                          js = d.createElement(s); js.id = id;
-                          js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.0&appId=1088640574599664&autoLogAppEvents=1';
-                          fjs.parentNode.insertBefore(js, fjs);
-                        }(document, 'script', 'facebook-jssdk'));</script>
-                      <div class="fb-page" data-href="https://www.facebook.com/TaylorSwift/" data-tabs="timeline" data-height="600" data-width="450" data-small-header="true"
-                       data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-                        <blockquote cite="https://www.facebook.com/TaylorSwift/" class="fb-xfbml-parse-ignore">
-                          <a href="https://www.facebook.com/TaylorSwift/">TAYLOR SWIFT</a>
-                        </blockquote>
-                      </div>
-      </div>
-      <br><br><br>
-    
-       <h3>TWITTER</h3>
-       <br>
-         <div><a class="twitter-timeline" data-width="400" data-height="600" href="https://twitter.com/taylorswift13?ref_src=twsrc%5Etfw">Tweets by taylorswift13</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                    </div>
-       
-                    
-      </article>                  
-
-
-        
-    </section>
-
-</div>
-
-
-
-</li></ul></div></nav></div>
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
-
-<!-- Footer -->
-<footer class="footer font-small mdb-color lighten-3 pt-4">
-
-  <!-- Footer Links -->
-  <div class="container text-center text-md-left">
-
-    <a href="index.html">
-      <img class="marginauto" src="images/swiftian-logo-black.jpg" alt="logo" style="width: 150px; height: auto; text-align:center"></a>
-    
-             <h1 style=" text-align: center;font-size: 30px">Swiftians</h7><br><br>
-
-    <!-- Grid row -->
-    <div class="row">
-
-      <!-- Grid column -->
-      <div class="col-md-4 col-lg-4 mr-auto my-md-4 my-0 mt-4 mb-1">
-
-        <!-- Content -->
-        <h5 class="font-weight-bold text-uppercase mb-4" style="font-size:30px">About</h5>
-        <p style="font-size: 22px">Developed By:</p>
-        <p style="font-size: 18px">Ankit Anurag</p><p style="font-size: 18px"> Aradhya Gupta</p>
-
-      </div>
-      <!-- Grid column -->
-
-      <hr class="clearfix w-100 d-md-none">
-
-      <!-- Grid column -->
-      <div class="col-md-4 col-lg-4 mx-auto my-md-4 my-0 mt-4 mb-1">
-
-        <!-- Links -->
-        
-      </div>
-      <!-- Grid column -->
-
-      <hr class="clearfix w-100 d-md-none">
-
-      <!-- Grid column -->
-      <div class="col-md-4 col-lg-4 mx-auto my-md-4 my-0 mt-4 mb-1">
-
-        <!-- Contact details -->
-        <h5 class="font-weight-bold text-uppercase mb-4" style="font-size: 30px">Address</h5>
-
-        <ul class="list-unstyled">
-          <li>
-            <p style="font-size: 18px">
-             New Boy's Hostel
-            </p>
-              <p style="font-size: 18px">IIT PATNA</p>
-              <p style="font-size: 18px">Bihta,Patna,India</p>
-          </li>
-        </ul>
-
-         
-
-      </div><br>
-      <br>
-      <!-- Grid column -->
-       <div class="container text-center">
-      
-
-      <div class="col-md-6 col-lg-6 text-center mx-auto my-5">
-        <h5 class="font-weight-bold text-uppercase mb-4" style="font-size:30px">Contact Us</h5>
- <!-- Social buttons -->
-        <a href="tel:919602647335"><i class="fa fa-mobile " style="font-size: 23px"></i></a>
-        <a href="#"><i class="fa fa-facebook" style="font-size: 20px"></i></a>
-        <a href="#"><i class="fa fa-instagram" style="font-size: 20px"></i></a>
-        <a href="https://twitter.com/nktanurag?s=09/"><i class="fa fa-twitter" style="font-size: 20px"></i></a>
-        <a href="#"><i class="fa fa-linkedin" style="font-size: 20px"></i></a>
-        
-        
-        <a href="https://api.whatsapp.com/send?phone=919602647335"><i class="fa fa-whatsapp" style="font-size: 20px"></i></a>
-       
-
-      </div>
-      <!-- Grid column -->
-
-
-     
-        
-
+    <div id="1989">
 
     </div>
-    <!-- Grid row -->
-    <div class="container text-center">
-    <ul class="list-unstyled">
-          <li>
-            <p>
 
-
-           
-            <h5 class="font-weight-bold text-uppercase mb-4" style="font-size: 30px">Visitor Box</h5>
-            <form action="/abc.php" method:"get">
-            <form style="margin: auto; width:5%" action="/abc.php" target="_blank">
-        
-
-           
-            <label for="fname" style="font-size: 20px">YOUR NAME?</label>
-  
-            <br>
-            <input class="myText" type="text" id="YOUR NAME" name="fname"><br><br>
-    
-            <label for="fname" style="font-size: 20px; ">Favourite TS Song?</label><br>
-            <input class="myText" type="text" id="Favourite TS Song" name="fname" ><br><br>
-
-            
-    
-           <label for="fname" style="font-size: 20px">Any Suggestions:</label><br>
-           <input class="myText" type="text" id="Favourite TS Song" name="fname" style="height: 100px ;width:225px"><br><br>
-    
-           <input type="SUBMIT" value="SUBMIT">
-           </form> 
-           </form>
-           <br>
-           <br>
-
-
-
-
-
-
-
-
-
-
-
-
-              </p>
-          </li>
-        </ul>
-
-  </div>
-  <!-- Footer Links -->
-
-
-
-
-
-   <br>
-   <br>
-   
-  <!--adding google calendar-->
-
-   <br><br><br>
-   <iframe style="margin:10px auto 20px;" src="https://calendar.google.com/calendar/embed?src=anuragankit2020%40gmail.com&ctz=Asia%2FKolkata" style="border: 5" width="300" height="250" frameborder="20" scrolling="no"></iframe>
-   <br>
-   <br>
- </div>
-
-   <!--google calendar added-->
-
-
-  <!-- Copyright -->
-  <div style="text-align: center; ">
-  <h2 style="text-align: center ;font-size: 20px">© 2020 Copyright</h2>
-    <a href="https://nktanurag.github.io/Learn-Web/site/?#">             TaylorSwiftFan.com</a>
-  </div>
-  
-  <!-- Copyright -->
-
-</footer>
-<!-- Footer -->
-
-  
+   <script>
+$(function(){
+  $("#1989").load("1989.html");
+});
+</script>
 
 
 
  
+   <div id="lover">
 
+    </div>
+   <script>
+$(function(){
+  $("#lover").load("lover.html");
+});
+</script>
+
+<div id="wall">
+
+</div>
+<script>
+$(function(){
+  $("#wall").load("wall.html");
+});
+</script>
+
+
+
+
+
+
+
+
+     
+
+
+
+ 
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+<div id="footer">
+
+</div>
+
+   <script>
+$(function(){
+  $("#footer").load("footer.html");
+});
+</script>
+<!--end of Navigation bar-->
+  
+<script src="/__/firebase/init.js"></script>
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
 </div>

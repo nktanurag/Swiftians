@@ -1,3 +1,17 @@
+.heading{
+    animation: yourAnimation 4s infinite 4s ease-out;
+}
+@keyframes yourAnimation{
+    0%{
+        opacity: 0;
+        }
+    83%{
+        opacity: 1;
+        font-size: 60px;
+        font-weight: 700;
+        }
+}
+
 * {
   box-sizing: border-box;
   }
@@ -143,6 +157,18 @@ footer a {
 
 footer a:hover {
   color: white;
+}
+ /*for toggling up and down about "taylor swift"*/
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
 }
 
 
