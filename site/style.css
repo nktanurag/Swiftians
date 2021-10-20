@@ -204,3 +204,25 @@ footer a:hover {
     width:device-width;
   }
 }
+
+/* 1989new css styling */
+ul.playerList{
+  list-style-type: none;
+  padding: 10px;
+}
+
+li.playerSong{
+  list-style-position:inside;
+  border: 1px solid black;
+  font-size: 2em;
+  font-family: newold;
+}
+li.playerSong:hover{
+  background-color: rgb(199, 195, 195);
+  cursor: pointer;
+}
+@media only screen and (max-width: 1200px) {
+    div > ul.playerList > li.playerSong{
+      font-size: 1.7em;
+    }
+}
